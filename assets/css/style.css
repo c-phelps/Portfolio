@@ -36,11 +36,35 @@ h2 {
     font-size: 180%;
 }
   
-h3 {
+h3, header {
     margin: 2% 0;
     font-size: 150%;
 }
 
+main{
+    width: 100vw;
+}
+
+#About{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+#About .FloatLeft {
+    border-right: solid;
+    flex: 0 0 25%;
+    height: 100%;  
+    text-align: right;
+}
+
+/* #AboutPgph{
+    display: flex;
+    flex: 0 0 60%;
+    height: 60%;
+    width: 100%;
+} */
 
 /* set the work section to be 600px with display property flex*/
 #Work{
@@ -71,6 +95,10 @@ h3 {
     flex: 0 0 60%;
     height: 60%;
     width: 100%;
+    display: flex;
+    background-image: url('./img/space.png');
+    background-size: cover; 
+    background-position: center; 
 }
 
 /* this project grid section is used to display the additional four projects in a grid style below the first project using flex wrap and a height of the remaining
@@ -86,13 +114,50 @@ h3 {
 .OtherProjects{
     flex: 1 0 50%;
     height: 50%;
+    display: flex;
 }
 
 
-.WorkDescriptions{
-        background-color: aqua;
-        align-self: center;
+#FirstProject .WorkDescriptions{
+    border: solid;
+    background-color: aqua;
+    align-self: flex-end;
+    margin-bottom: 2%;
+    width: 175px;
 } 
+
+.OtherProjects .WorkDescriptions{
+        border: solid;
+        background-color: aqua;
+        align-self: flex-end;
+        margin-bottom: 2%;
+        width: 175px;
+} 
+
+#Project2{ 
+    background-image: url('./img/grass.png');
+    background-size: cover; 
+    background-position: center;    
+}
+
+#Project3{ 
+    background-image: url('./img/leather.png');
+    background-size: cover; 
+    background-position: center;    
+}
+
+
+#Project4{ 
+    background-image: url('./img/blue.png');
+    background-size: cover; 
+    background-position: center;    
+}
+
+#Project5{ 
+    background-image: url('./img/red.png');
+    background-size: cover; 
+    background-position: center;    
+}
 
 #Contact{
     height: 200px;
@@ -114,7 +179,3 @@ h3 {
     display: flex;
     justify-content: space-between;
 } 
-
-/* .InheritHeight{    
-    height: 100%;  
-} */
