@@ -1,6 +1,19 @@
+/* CJPhelps 6/4/2024 beginning work on CSS commenting */
 
 /* Style the nav content to fit the right side of the screen and
     make sure the content resizes when the screen resolution changes */
+
+:root{
+    --firstColor: #C2B280;
+    --secondColor: #352E19;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 nav ul{
     display: flex;
     justify-content: flex-end;
@@ -18,11 +31,13 @@ nav ul li a{
 }
 
 section{
-    border: solid, .5px;
+    /* border: solid, .5px; */
 }
 
 body{
-    font-family: arial;
+    font-family: "Georgia", Arial, sans-serif;
+    /* font-size: 16px; */
+    color: var(--secondColor);
 }
 
 /* setting default heights and margins for headers */
@@ -36,13 +51,9 @@ h2 {
     font-size: 180%;
 }
   
-h3, header {
+h3, header  {
     margin: 2% 0;
     font-size: 150%;
-}
-
-main{
-    width: 100vw;
 }
 
 #About{
@@ -52,33 +63,28 @@ main{
     margin-bottom: 2%;
 }
 
-#About .FloatLeft {
+/* set the floatleft id to be 25% of the width of the work ID with 100% of the height of the work id and align to the right as seen in the demo */
+.FloatLeft {
+    margin-right: 1%;
     border-right: solid;
+    border-color: var(--secondColor);
     flex: 0 0 25%;
     height: 100%;  
     text-align: right;
+    padding: 1%;
 }
 
-/* #AboutPgph{
+ #AboutPgph{
     display: flex;
-    flex: 0 0 60%;
-    height: 60%;
+    flex: 0 0 74%;
     width: 100%;
-} */
+} 
 
 /* set the work section to be 600px with display property flex*/
 #Work{
-    height: 600px;
+    height: 700px;
     width: 100%;
     display: flex;
-}
-
-/* set the floatleft id to be 25% of the width of the work ID with 100% of the height of the work id and align to the right as seen in the demo */
-#Work .FloatLeft {
-    border-right: solid;
-    width: 25%;
-    height: 100%;  
-    text-align: right;
 }
 
 /* set the work pannels id section to have a width of 75% (the remainder of the screen) and flex direction of column, which allows the float left section and this section 
@@ -86,19 +92,21 @@ main{
 #WorkPannels{
     flex-direction:column;
     flex-wrap: wrap;
-    width: 75%;
+    width: 74%;
 }
 
 /* as discussed in the acceptance criteria the first project should be larger than the others so it takes up 60% of the height of the workpannels section
     and has 100% of the width of the workpannels section (75% of the work section) */
 #FirstProject{
     flex: 0 0 60%;
-    height: 60%;
-    width: 100%;
+    height: 58%; /* -1% top 1% bot */
+    width: 99%; /* -.5% right .5% left */
     display: flex;
     background-image: url('./img/space.png');
     background-size: cover; 
     background-position: center; 
+    margin: 1% .5% 1% .5%;
+    border: 5px solid var(--firstColor);
 }
 
 /* this project grid section is used to display the additional four projects in a grid style below the first project using flex wrap and a height of the remaining
@@ -107,30 +115,34 @@ main{
     display: flex;
     flex-wrap: wrap;
     flex: 1; 
-    height: 40%;
+    height: 39%;
     /* width: 100%; */
 }
 /* the other projects class is used to set the height/width of the four remaining projects individually to 50% of the workpannels width (50% of 75% of the screen width) */
 .OtherProjects{
-    flex: 1 0 50%;
-    height: 50%;
+    flex: 1 0 40%;
+    height: 40%;
     display: flex;
+    margin-top: .5%;
+    margin-right: .5%;
+    margin-left: .5%;
+    border: 5px solid var(--firstColor);
 }
 
 
 #FirstProject .WorkDescriptions{
-    border: solid;
-    background-color: aqua;
+    background-color: var(--firstColor);
     align-self: flex-end;
     margin-bottom: 2%;
+    padding: .5%;
     width: 175px;
 } 
 
 .OtherProjects .WorkDescriptions{
-        border: solid;
-        background-color: aqua;
+        background-color: var(--firstColor);
         align-self: flex-end;
         margin-bottom: 2%;
+        padding: .5%;
         width: 175px;
 } 
 
@@ -159,23 +171,30 @@ main{
     background-position: center;    
 }
 
-#Contact{
+#Contact {
     height: 200px;
     margin-top: 2%;
-    border-left: solid;
     width: 100%;
-    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+
+#ContactInfo {
+    flex: 1;
+    width: 75%;
+    margin: 1% 0 1% 0;
 }
 
 #Contact ul {  
     display: flex;
     justify-content: space-around;
+    
 }
 
-#Contact ul li a{   
-    height: 100%;   
+#Contact ul li a{    
     color: inherit;
     text-decoration: none;
-    display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 } 
