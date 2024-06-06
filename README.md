@@ -18,4 +18,7 @@ Wireframing website "https://app.diagrams.net/"\
 ## Special Thanks:
 Daler Singh and Sachin J. for having taught me how to apply what we are learning with CSS and HTML into an active webpage.
 
-
+### TODO:
+More responsive design for mobile
+Get links working
+Add more projects to the portfolio
