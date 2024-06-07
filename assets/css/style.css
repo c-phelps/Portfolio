@@ -6,6 +6,7 @@
 :root{
     --firstColor: #C2B280;
     --secondColor: #352E19;
+    --thirdColor: #281300;
 }
 
 main{
@@ -14,47 +15,107 @@ main{
     flex-wrap: wrap;
 }
 
-nav ul{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-/* give a slight margin to the links in the nav*/
-nav ul li{
-    margin-right: 2%;
-}
-/* Remove underline from the links in the nav */
-nav ul li a{  
-    color: inherit;  
-    text-decoration: none;
-}
+/* Used only to test the layout of the individual sections to match my wireframe model */
 
-section{
-    /* border: solid, .5px; */
-}
+/* section {
+     border: solid, .5px; 
+} */
+
 
 body{
     font-family: "Georgia", Arial, sans-serif;
-    /* font-size: 16px; */
+    font-size: 16px;
     color: var(--secondColor);
 }
 
-/* setting default heights and margins for headers */
+/* setting default heights and margins for h1, h2, h3, and header(s) */
 h1 {
-    font-size: 200%;
+    font-size: 180%;
 }
-
-
 h2 {
     margin: 2% 0;
     font-size: 180%;
-}
-  
+}  
 h3, header  {
     margin: 2% 0;
     font-size: 150%;
 }
+
+#PageHeader {
+    background-color: var(--thirdColor);
+    display: flex;
+    justify-content: space-between; /* Align items with space between them */
+    align-items: center; /* Center align items vertically */
+    height: 100px;
+}
+
+.NameBox {
+    display: flex;
+    background-color: var(--firstColor);
+    padding: 5px; /* Adjust the padding to create space around the text */
+}
+
+#PageHeader h1 {
+    
+    color: var(--thirdColor);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#PageHeader nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    color: var(--firstColor);
+}
+
+
+
+/* Remove the margin from this first header so that there is no space between this header and 
+    the top of the page */
+#RemoveMargin{
+    margin-top: 0;
+}
+
+
+#ImageWrap{
+    height: 120px;
+    margin: 0 0 2% 0;
+    background-image: url('./img/Earthtone1.png');
+    background-size: cover; 
+    background-position: center;    
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px; /* Adjust margin as needed */
+}
+
+nav ul li a {
+    flex-grow: 1;
+    color: inherit;
+    text-decoration: underline;
+    display: flex;
+    text-align: center; 
+    font-size: 75%;
+}
+
+
+
 
 #About{
     height: 200px;
@@ -98,11 +159,11 @@ h3, header  {
 /* as discussed in the acceptance criteria the first project should be larger than the others so it takes up 60% of the height of the workpannels section
     and has 100% of the width of the workpannels section (75% of the work section) */
 #FirstProject{
-    flex: 0 0 60%;
+    flex: 1 1 60%;
     height: 58%; /* -1% top 1% bot */
     width: 99%; /* -.5% right .5% left */
     display: flex;
-    background-image: url('./img/space.png');
+    background-image: url('./img/Earthtone3.png');
     background-size: cover; 
     background-position: center; 
     margin: 1% .5% 1% .5%;
@@ -120,7 +181,7 @@ h3, header  {
 }
 /* the other projects class is used to set the height/width of the four remaining projects individually to 50% of the workpannels width (50% of 75% of the screen width) */
 .OtherProjects{
-    flex: 1 0 40%;
+    flex: 1 1 40%;
     height: 40%;
     display: flex;
     margin-top: .5%;
@@ -135,19 +196,21 @@ h3, header  {
     align-self: flex-end;
     margin-bottom: 2%;
     padding: .5%;
-    width: 175px;
+    flex: 1;
+    max-width: 20%;
 } 
 
 .OtherProjects .WorkDescriptions{
-        background-color: var(--firstColor);
-        align-self: flex-end;
-        margin-bottom: 2%;
-        padding: .5%;
-        width: 175px;
+    background-color: var(--firstColor);
+    align-self: flex-end;
+    margin-bottom: 2%;
+    padding: .5%;
+    flex: 1;
+    max-width: 40%;
 } 
 
 #Project2{ 
-    background-image: url('./img/grass.png');
+    background-image: url('./img/Earthtone2.png');
     background-size: cover; 
     background-position: center;    
 }
@@ -198,3 +261,43 @@ h3, header  {
     text-decoration: none;
     /* justify-content: space-between; */
 } 
+
+
+@media screen and (max-width: 425px) {
+    body {
+        font-size: 12px; 
+    }
+    h1 {
+        font-size: 150%;
+    }
+    a {
+        font-size: 16;
+    }
+    
+    h2 {
+        margin: 2% 0;
+        font-size: 180%;
+    }
+      
+    h3, header  {
+        margin: 2% 0;
+        font-size: 150%;
+    }
+    #FirstProject .WorkDescriptions{
+        max-width: 37.5%;
+    } 
+    .OtherProjects .WorkDescriptions{
+        max-width: 75%;
+    } 
+    nav ul li a {
+        font-size: 70%;
+    }
+    
+}
+
+
+@media screen and (max-width: 320px) {
+    #PageHeader nav ul li {
+        margin: 0 5px; /* Adjust margin as needed */
+    }    
+}
