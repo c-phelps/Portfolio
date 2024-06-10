@@ -13,7 +13,7 @@ WAVE evaluation tool\
 VS Code\
 GitBash\
 GitHub\
-Wireframing website "https://app.diagrams.net/"\
+Wireframing website "https://app.diagrams.net/"
 
 ### Done so far:
 Website matches the wireframe mockup\
