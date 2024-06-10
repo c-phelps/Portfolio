@@ -29,7 +29,7 @@ About me typed up
 
 ### TODO:
 Add more projects to the portfolio\
-Add updated resume to the portfolio\
+Add updated resume to the portfolio
 
 
 ### Special Thanks:
