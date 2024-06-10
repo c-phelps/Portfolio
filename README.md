@@ -15,9 +15,6 @@ GitBash\
 GitHub\
 Wireframing website "https://app.diagrams.net/"\
 
-## Special Thanks:
-Daler Singh and Sachin J. for having taught me how to apply what we are learning with CSS and HTML into an active webpage.
-
 ### Done so far:
 Website matches the wireframe mockup\
 When users click on the Nav links, they are taken to the corresponding section\
@@ -31,3 +28,6 @@ About me typed up\
 Add more projects to the portfolio\
 Add updated resume to the portfolio\
 
+
+## Special Thanks:
+Daler Singh and Sachin J. for having taught me how to apply what we are learning with CSS and HTML into an active webpage.
