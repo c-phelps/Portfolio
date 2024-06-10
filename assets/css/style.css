@@ -144,9 +144,16 @@ nav ul li a {
     flex-wrap: wrap;
     width: 74%;
 }
+/* Class to standardize the text inside of my project descriptsions instead of the default effects of the anchor tag */
+.URLStandard{    
+    color: inherit;
+    text-decoration: none;
+}
 /* as discussed in the acceptance criteria the first project should be larger than the others so it takes up 60% of the height of the workpannels section
     and has 100% of the width of the workpannels section (75% of the work section) */
+/* position set to relative in order to allow subsequent sections to follow the propper flow */
 #FirstProject{
+    position: relative;
     flex: 1 1 60%;
     height: 58%; /* -1% top 1% bot */
     width: 99%; /* -.5% right .5% left */
@@ -156,7 +163,41 @@ nav ul li a {
     background-position: center; 
     margin: 1% .5% 1% .5%;
     border: 5px solid var(--firstColor);
+    overflow: hidden;
+    cursor: pointer;
 }
+/* First Project pseudo element to cover the entire section with empty content */
+/* position set to absolute to cover all of first project */
+#FirstProject::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* set this element background color to black with an opacity of 0 */
+    background-color: rgba(0,0,0,0);
+    /* smooth the transition for when we increase opacity */
+    transition: background-color 0.3s; 
+    /* set this z-index so the effect is above the work descriptions which we will give a z-index of 0 */
+    z-index: 1;
+} 
+#FirstProject:hover::before{
+    /* set the black opacity to 0.5 */
+    background-color: rgba(0,0,0,0.5);
+}
+/* description for first project should only take up 20% of it's parent's width */
+/* position set to relative so that it is not forced to the end of the content when hovered */
+#FirstProject .WorkDescriptions{
+    position: relative;
+    background-color: var(--firstColor);
+    align-self: flex-end;
+    margin-bottom: 2%;
+    padding: .5%;
+    flex: 1;
+    max-width: 20%;
+    z-index: 0;
+} 
 /* this project grid section is used to display the additional four projects in a grid style below the first project using flex wrap and a height of the remaining
     40% of the workpannels section with a flexible layout that will adjust based on screen size */
 #ProjectGrid{
@@ -176,15 +217,6 @@ nav ul li a {
     margin-left: .5%;
     border: 5px solid var(--firstColor);
 }
-/* description for first project should only take up 20% of it's parent's width */
-#FirstProject .WorkDescriptions{
-    background-color: var(--firstColor);
-    align-self: flex-end;
-    margin-bottom: 2%;
-    padding: .5%;
-    flex: 1;
-    max-width: 20%;
-} 
 /* other projects should take up 40% of their parent's widths */
 .OtherProjects .WorkDescriptions{
     background-color: var(--firstColor);
@@ -196,24 +228,101 @@ nav ul li a {
 } 
 /* Set the images for the individual projects */
 #Project2{ 
+    position: relative; /* changed position to relative*/
     background-image: url('./img/Earthtone2.png');
     background-size: cover; 
     background-position: center;    
 }
+/* copy pasted content from First Project to work with Project 2*/
+#Project2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* set this element background color to black with an opacity of 0 */
+    background-color: rgba(0,0,0,0);
+    /* smooth the transition for when we increase opacity */
+    transition: background-color 0.3s; 
+} 
+/* copy pasted content from First Project to work with Project 2*/
+#Project2:hover::before{
+    /* set the black opacity to 0.5 */
+    background-color: rgba(0,0,0,0.5);
+}
+
 #Project3{ 
+    position: relative; /* changed position to relative*/
     background-image: url('./img/leather.png');
     background-size: cover; 
     background-position: center;    
 }
+/* copy pasted content from First Project to work with Project 3*/
+#Project3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* set this element background color to black with an opacity of 0 */
+    background-color: rgba(0,0,0,0);
+    /* smooth the transition for when we increase opacity */
+    transition: background-color 0.3s; 
+} 
+/* copy pasted content from First Project to work with Project 3*/
+#Project3:hover::before{
+    /* set the black opacity to 0.5 */
+    background-color: rgba(0,0,0,0.5);
+}
 #Project4{ 
+    position: relative; /* changed position to relative*/
     background-image: url('./img/Earthtone7.png');
     background-size: cover; 
     background-position: center;    
 }
+/* copy pasted content from First Project to work with Project 4*/
+#Project4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* set this element background color to black with an opacity of 0 */
+    background-color: rgba(0,0,0,0);
+    /* smooth the transition for when we increase opacity */
+    transition: background-color 0.3s; 
+} 
+/* copy pasted content from First Project to work with Project 4*/
+#Project4:hover::before{
+    /* set the black opacity to 0.5 */
+    background-color: rgba(0,0,0,0.5);
+}
 #Project5{ 
+    position: relative; /* changed position to relative*/
     background-image: url('./img/Earthtone6.png');
     background-size: cover; 
     background-position: center;    
+}
+/* copy pasted content from First Project to work with Project 5*/
+#Project5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* set this element background color to black with an opacity of 0 */
+    background-color: rgba(0,0,0,0);
+    /* smooth the transition for when we increase opacity */
+    transition: background-color 0.3s; 
+} 
+/* copy pasted content from First Project to work with Project 5*/
+#Project5:hover::before{
+    /* set the black opacity to 0.5 */
+    background-color: rgba(0,0,0,0.5);
 }
 /* set the height for the contact section */
 #Contact {
