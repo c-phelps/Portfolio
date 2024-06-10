@@ -1,6 +1,9 @@
 # Portfolio
 by Chris Phelps: https://c-phelps.github.io/Portfolio/
 
+![image](https://github.com/c-phelps/Portfolio/assets/169304277/797e6600-54e8-4a00-959c-c82572ba9e47)
+
+
 ## Purpose of this repo
 To demonstrate what I have learned thus far using CSS and HTML in a responsive webpage that can later be updated to include information about me, updated projects and contact information.
 
