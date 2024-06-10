@@ -10,17 +10,20 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
+    <!-- Unique ID to remove all padding from this header section -->
     <header id="RemoveMargin">
+        <!-- unique ID to allow for formatting of this header and Nav section -->
         <section id="PageHeader">
-            <div class="NameBox">
-                <h1>CPhelps</h1>
+            <!-- unique ID for formatting the color around the name box -->
+            <div id="NameBox">
+                <h1>Chris Phelps</h1>
             </div>
             <nav>
                 <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact Me</a></li>
-                <li><a href="#">Resume</a></li>
+                <li><a href="#About">About Me</a></li>
+                <li><a href="#Work">Work</a></li>
+                <li><a href="#Contact">Contact Me</a></li>
+                <li id="ResumePseudo"><a href="#">Resume</a></li>
                 </ul>
             </nav>
         </section>
@@ -28,24 +31,42 @@
         <section id="ImageWrap"></section>
     </header>
     <main>
+        <!-- unique ID for the about section of the page and to set the default height -->
         <section id="About">
+            <!-- Class set to make this header offset to the left side -->
             <section class = "FloatLeft">
                 <h2>About Me</h2>
             </section>
+            <!-- unique ID for formatting the AboutPgph -->
             <section id="AboutPgph">                
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis laudantium ipsa molestiae minima nisi maxime quidem debitis eum, quae aperiam vel? Ab obcaecati voluptatem nam perferendis earum. Sequi, quae sapiente!
+                    Hey! My name is Chris Phelps. I am a software developer with 3 years experience with a small software company. 
+                    I have proficiency with SQL, Visual Basic, VBA and C++ and am currently in the process of learning full stack development (CSS, HTML and JS)! 
+                    </br>
+                    </br>
+                    This portfolio should demonstrate some of the CSS and HTML practices that I have learned thus far and will be a good centralized 
+                    location for me to show off the projects that I have completed. So far it is a work in progress still with only one project being completed so far, 
+                    but I will be updating it as I complete more projects!
+                    </br>
+                    </br>
+                    I enjoy watching Soccer and supporting my favorite team Liverpool FC. I have been an LFC fan since before I was 15 years old! I am also learning to play
+                    chess, and I enjoy playing video games when there is free time.
+
                 </p>
             </section>
         </section>
-        
+        <!-- unique section for formatting each of the projects below -->
         <section id ="Work">
+            <!-- Class set to make this header offset to the left side -->
             <section class = "FloatLeft">
                 <h2>Work</h2>
-            </section>            
+            </section>         
+            <!-- unique ID to format this section to match the mockup and set its height
+             - firs project large and subsequent projects below that one in a grid style -->
             <section id="WorkPannels">
+                <!-- unique ID to format the first project as larger than the other projects -->
                 <section id="FirstProject">
-                    <!-- <img src="placeholder.png" alt="descriptive-text"> -->
+                    <!-- class ID that is used to format all of the descriptive text for my projects -->
                     <div class="WorkDescriptions" >
                         <header>First Project</header>
                         <p>First project description.</p>
@@ -85,16 +106,20 @@
             </section>
         
         </section>
+        <!-- unique ID for formatting the starting height of this section -->
         <section id="Contact">
             <section class = "FloatLeft">
+                <!-- Class set to make this header offset to the left side -->
                 <h2>Contact Me</h2>
-            </section>            
+            </section>
+           <!-- unique ID for the contact info section of the page -->
             <section id="ContactInfo">
                 <ul>
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">Phone</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">GitHub</a></li>
+                    <!-- unique ID for pseudo classes/elements -->
+                    <li id="EmailPseudo"><a href="#ContactInfo">Email</a></li>
+                    <li id="PhonePseudo"><a href="#ContactInfo">Phone</a></li>
+                    <li id="TwitterPseudo"><a href="#ContactInfo">Twitter</a></li>
+                    <li><a href="https://github.com/c-phelps/">GitHub</a></li>
                 </ul>                
             </section>
         </section>
