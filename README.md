@@ -29,5 +29,5 @@ Add more projects to the portfolio\
 Add updated resume to the portfolio\
 
 
-## Special Thanks:
+### Special Thanks:
 Daler Singh and Sachin J. for having taught me how to apply what we are learning with CSS and HTML into an active webpage.
